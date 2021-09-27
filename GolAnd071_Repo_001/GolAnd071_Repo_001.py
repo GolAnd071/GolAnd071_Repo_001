@@ -72,7 +72,7 @@ def ex4():
     circle(screen, (0, 0, 0), (285, 440), 5)
 
 if __name__ == '__main__':
-    eval('ex' + '4' + '()')
+    eval('ex' + input() + '()')
 
 pygame.display.update()
 clock = pygame.time.Clock()
