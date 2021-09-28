@@ -1,24 +1,27 @@
 import pygame
-
 from pygame.draw import *
 
 pygame.init()
 
 FPS = 30
 
+
 def ex1():
     screen = pygame.display.set_mode((400, 400))
     rect(screen, (255, 0, 255), (100, 100, 200, 200))
     rect(screen, (0, 0, 255), (100, 100, 200, 200), 5)
-    polygon(screen, (255, 255, 0), [(100,100), (200,50), (300,100), (100,100)])
-    polygon(screen, (0, 0, 255), [(100,100), (200,50), (300,100), (100,100)], 5)
+    polygon(screen, (255, 255, 0), [(100, 100), (200, 50), (300, 100), (100, 100)])
+    polygon(screen, (0, 0, 255), [(100, 100), (200, 50), (300, 100), (100, 100)], 5)
     circle(screen, (0, 255, 0), (200, 175), 50)
     circle(screen, (255, 255, 255), (200, 175), 50, 5)
 
+
 def ex2():
     screen = pygame.display.set_mode((400, 400))
-    x1 = 100; y1 = 100
-    x2 = 300; y2 = 200
+    x1 = 100
+    y1 = 100
+    x2 = 300
+    y2 = 200
     N = 10
     color = (255, 255, 255)
     rect(screen, color, (x1, y1, x2 - x1, y2 - y1), 2)
@@ -27,6 +30,7 @@ def ex2():
     for i in range(N):
         line(screen, color, (x, y1), (x, y2))
         x += h
+
 
 def ex3():
     screen = pygame.display.set_mode((400, 400))
@@ -42,6 +46,7 @@ def ex3():
     circle(screen, (0, 0, 0), (250, 175), 8)
     polygon(screen, (0, 0, 0), ((100, 125), (185, 170), (190, 160), (105, 115)))
     polygon(screen, (0, 0, 0), ((300, 140), (215, 170), (211, 160), (296, 130)))
+
 
 def ex4():
     screen = pygame.display.set_mode((400, 600))
@@ -66,13 +71,27 @@ def ex4():
     ellipse(screen, (100, 100, 100), (180, 20, 200, 30))
     ellipse(screen, (70, 70, 70), (50, 30, 200, 30))
     rect(screen, (50, 50, 50), (70, 30, 20, 60))
-    polygon(screen, (200, 200, 200), ((250, 550), (270, 450), (290, 440), (350, 525), (340, 545), (310, 525), (300, 535), (270, 525)))
+    polygon(
+        screen,
+        (200, 200, 200),
+        (
+            (250, 550),
+            (270, 450),
+            (290, 440),
+            (350, 525),
+            (340, 545),
+            (310, 525),
+            (300, 535),
+            (270, 525),
+        ),
+    )
     circle(screen, (200, 200, 200), (280, 445), 20)
     circle(screen, (0, 0, 0), (270, 440), 5)
     circle(screen, (0, 0, 0), (285, 440), 5)
 
-if __name__ == '__main__':
-    eval('ex' + input() + '()')
+
+if __name__ == "__main__":
+    eval("ex" + input() + "()")
 
 pygame.display.update()
 clock = pygame.time.Clock()
