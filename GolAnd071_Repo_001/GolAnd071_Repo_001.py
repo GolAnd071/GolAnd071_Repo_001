@@ -6,6 +6,17 @@ pygame.init()
 FPS = 30
 
 
+BckgrndColor = (125, 125, 125)
+HsColor = (54, 44, 18)
+HsLeftWindowsColor = (53, 23, 12)
+HsRightWindowColor = (255, 255, 0)
+HsBalconyColor = (50, 50, 50)
+HsUpperWindowsColor = (172, 138, 100)
+HsRoofColor = (0, 0, 0)
+GhstColor = (200, 200, 200)
+GhstEyeColor = (0, 0, 0)
+
+
 def ex1():
     """
     Draws a house
@@ -107,7 +118,7 @@ def drawBckgrnd(scr):
     Draws Background
     :param scr: the screen on which the function will draw, type == pygame.Surface
     """
-    rect(scr, (125, 125, 125), (0, 0, 400, 250))
+    rect(scr, BckgrndColor, (0, 0, 400, 250))
 
 
 def drawHs(scr, stPnt, scl=1):
@@ -117,43 +128,43 @@ def drawHs(scr, stPnt, scl=1):
     :param stPnt: Start points, tuple of two cords, stPnt[0] is horizontal, stPnt[1] is vertical
     :param scl: Scale
     """
-    rect(scr, (54, 44, 18), (stPnt[0], stPnt[1], 200 * scl, 300 * scl))
+    rect(scr, HsColor, (stPnt[0], stPnt[1], 200 * scl, 300 * scl))
     rect(
         scr,
-        (53, 23, 12),
+        HsLeftWindowsColor,
         (stPnt[0] + 30 * scl, stPnt[1] + 220 * scl, 40 * scl, 50 * scl),
     )
     rect(
         scr,
-        (53, 23, 12),
+        HsLeftWindowsColor,
         (stPnt[0] + 80 * scl, stPnt[1] + 220 * scl, 40 * scl, 50 * scl),
     )
     rect(
         scr,
-        (255, 255, 0),
+        HsRightWindowColor,
         (stPnt[0] + 130 * scl, stPnt[1] + 220 * scl, 40 * scl, 50 * scl),
     )
     rect(
         scr,
-        (50, 50, 50),
+        HsBalconyColor,
         (stPnt[0] - 20 * scl, stPnt[1] + 150 * scl, 240 * scl, 30 * scl),
     )
     for i in range(4):
         rect(
             scr,
-            (172, 138, 100),
+            HsUpperWindowsColor,
             (stPnt[0] + (20 + i * 130 / 3) * scl, stPnt[1], 30 * scl, 150 * scl),
         )
     for i in range(7):
         rect(
             scr,
-            (50, 50, 50),
+            HsBalconyColor,
             (stPnt[0] - (10 - i * 35) * scl, stPnt[1] + 120 * scl, 10 * scl, 30 * scl),
         )
-    rect(scr, (50, 50, 50), (stPnt[0], stPnt[1] + 110 * scl, 200 * scl, 10 * scl))
+    rect(scr, HsBalconyColor, (stPnt[0], stPnt[1] + 110 * scl, 200 * scl, 10 * scl))
     polygon(
         scr,
-        (0, 0, 0),
+        HsRoofColor,
         (
             (stPnt[0] - 20 * scl, stPnt[1]),
             (stPnt[0] + 20 * scl, stPnt[1] - 30 * scl),
@@ -171,10 +182,9 @@ def drawGhst(scr, stPnt, scl=1, hScl=1):
     :param scl: Width Scale
     :param hScl: Height Scale
     """
-    print(type(stPnt), type(scl), type(hScl))
     polygon(
         scr,
-        (200, 200, 200),
+        GhstColor,
         (
             (stPnt[0], stPnt[1]),
             (stPnt[0] + 20 * scl * hScl, stPnt[1] - 100 * scl),
@@ -188,12 +198,12 @@ def drawGhst(scr, stPnt, scl=1, hScl=1):
     )
     circle(
         scr,
-        (200, 200, 200),
+        GhstColor,
         (stPnt[0] + 30 * scl * hScl, stPnt[1] - 105 * scl),
         20 * scl,
     )
-    circle(scr, (0, 0, 0), (stPnt[0] + 20 * scl * hScl, stPnt[1] - 110 * scl), 5 * scl)
-    circle(scr, (0, 0, 0), (stPnt[0] + 35 * scl * hScl, stPnt[1] - 110 * scl), 5 * scl)
+    circle(scr, GhstEyeColor, (stPnt[0] + 20 * scl * hScl, stPnt[1] - 110 * scl), 5 * scl)
+    circle(scr, GhstEyeColor, (stPnt[0] + 35 * scl * hScl, stPnt[1] - 110 * scl), 5 * scl)
 
 
 def ex5():
