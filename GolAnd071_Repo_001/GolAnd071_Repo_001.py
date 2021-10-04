@@ -7,6 +7,9 @@ FPS = 30
 
 
 def ex1():
+    """
+    Draws a house
+    """
     screen = pygame.display.set_mode((400, 400))
     rect(screen, (255, 0, 255), (100, 100, 200, 200))
     rect(screen, (0, 0, 255), (100, 100, 200, 200), 5)
@@ -17,6 +20,9 @@ def ex1():
 
 
 def ex2():
+    """
+    Draws rectangles
+    """
     screen = pygame.display.set_mode((400, 400))
     x1 = 100
     y1 = 100
@@ -33,6 +39,9 @@ def ex2():
 
 
 def ex3():
+    """
+    Draws an angry smile
+    """
     screen = pygame.display.set_mode((400, 400))
     rect(screen, (150, 150, 150), (0, 0, 400, 400))
     circle(screen, (255, 255, 0), (200, 200), 100)
@@ -49,6 +58,9 @@ def ex3():
 
 
 def ex4():
+    """
+    Draws first picture
+    """
     screen = pygame.display.set_mode((400, 600))
     rect(screen, (125, 125, 125), (0, 0, 400, 250))
     ellipse(screen, (50, 50, 50), (200, 100, 220, 30))
@@ -91,10 +103,20 @@ def ex4():
 
 
 def drawBckgrnd(scr):
+    """
+    Draws Background
+    :param scr: the screen on which the function will draw, type == pygame.Surface
+    """
     rect(scr, (125, 125, 125), (0, 0, 400, 250))
 
 
 def drawHs(scr, stPnt, scl=1):
+    """
+    Draws a house
+    :param scr: the screen on which the function will draw, type == pygame.Surface
+    :param stPnt: Start points, tuple of two cords, stPnt[0] is horizontal, stPnt[1] is vertical
+    :param scl: Scale
+    """
     rect(scr, (54, 44, 18), (stPnt[0], stPnt[1], 200 * scl, 300 * scl))
     rect(
         scr,
@@ -142,6 +164,14 @@ def drawHs(scr, stPnt, scl=1):
 
 
 def drawGhst(scr, stPnt, scl=1, hScl=1):
+    """
+    Draws a ghost
+    :param scr: the screen on which the function will draw, type == pygame.Surface
+    :param stPnt: Start points, tuple of two cords, stPnt[0] is horizontal, stPnt[1] is vertical
+    :param scl: Width Scale
+    :param hScl: Height Scale
+    """
+    print(type(stPnt), type(scl), type(hScl))
     polygon(
         scr,
         (200, 200, 200),
@@ -167,14 +197,17 @@ def drawGhst(scr, stPnt, scl=1, hScl=1):
 
 
 def ex5():
+    """
+    Draws second picture
+    """
     screen = pygame.display.set_mode((400, 600))
     drawBckgrnd(screen)
     drawHs(screen, (20, 220), 0.5)
     drawHs(screen, (150, 170), 0.5)
     drawHs(screen, (290, 120), 0.5)
-    circle(screen, (255, 255, 255), (360, 40), 30)
-    ellipse(screen, (100, 100, 100), (180, 20, 200, 30))
-    ellipse(screen, (70, 70, 70), (50, 30, 200, 30))
+    circle(screen, (255, 255, 255), (360, 40), 30)  # sun
+    ellipse(screen, (100, 100, 100), (180, 20, 200, 30))  # cloud
+    ellipse(screen, (70, 70, 70), (50, 30, 200, 30))  # cloud
     drawGhst(screen, (250, 550), 1, -1)
     drawGhst(screen, (250, 550))
     drawGhst(screen, (100, 550), 0.5)
