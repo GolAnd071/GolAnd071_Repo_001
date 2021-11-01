@@ -7,6 +7,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "GolAnd071_Repo_001", "GolAn
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "GolAnd071_Repo_002", "GolAnd071_Repo_002\GolAnd071_Repo_002.pyproj", "{2AF17524-30B1-4B2A-9120-6D5CDEB5DF83}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "GolAnd071Gun", "..\GolAnd071Gun\GolAnd071Gun\GolAnd071Gun.pyproj", "{AB51ECA2-C0D7-4A46-8D8E-060C60F290FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,8 @@ Global
 		{B988344B-B54D-4154-B4FC-BE2C99E649F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF17524-30B1-4B2A-9120-6D5CDEB5DF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2AF17524-30B1-4B2A-9120-6D5CDEB5DF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB51ECA2-C0D7-4A46-8D8E-060C60F290FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB51ECA2-C0D7-4A46-8D8E-060C60F290FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
